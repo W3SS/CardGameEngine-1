@@ -12,13 +12,6 @@ public class Deck
 	public Deck()
 	{
 
-		initDeck();
-
-	}
-
-	public void initDeck()
-	{
-
 		addClubs();
 		addDiamonds();
 		addHearts();
