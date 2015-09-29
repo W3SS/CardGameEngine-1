@@ -1,8 +1,8 @@
 import java.util.ArrayList;
 
 /*
-	Created by Matthew Chivallati on 9/9/2015.
- */
+* @author Matthew Chivallati
+*/
 
 public class Deck
 {
@@ -78,8 +78,11 @@ public class Deck
 		}
 
 	}
-
-	public String checkRank(int i) //only to be used with the add*SuitName* methods // i < 13
+	
+	/* !--only to be used with the add*SuitName* methods--!
+	   @param i		where int i < 13
+	   @return		string for the card rank */
+	public String checkRank(int i)  // i < 13
 	{
 
 		if (i == 0) {
@@ -153,6 +156,9 @@ public class Deck
 
 	}
 
+	/* @param i		where i is in the range 0-52 inclusive
+	   @param k		where k is in the range 0-52 inclusive
+	   @see #shuffleDeck(int) */
 	public void swap(int i , int k)
 	{
 
@@ -168,6 +174,7 @@ public class Deck
 
 	}
 
+	// @param numShuffles	number of induvidual swaps
 	public void shuffleDeck( int numShuffles )
 	{
 
@@ -180,16 +187,16 @@ public class Deck
 		}
 
 	}
-
-	//---------- Random Number Method ---------//
-
-
-	public static int randomInt( int min, int max ) //generates a random number
+	
+	/* @param min		the minuim value bound
+	*  @param max		the maximum value bound
+	*  @return 		random value from min - max */
+	public static int randomInt( int min, int max )
 	{
 
-		int range = ( max + 1 ) - min; //used to control the maximum value the random method outputs
+		int range = ( max + 1 ) - min;
 
-		return (int) ( ( Math.random( ) * range ) + min ); //returns the value generated to randomNum( int min , int max )
+		return (int) ( ( Math.random( ) * range ) + min );
 
 	}
 
